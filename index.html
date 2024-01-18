@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Uživatelská aplikace</title>
+</head>
+<body>
+
+<div id="menu">
+    <button onclick="showRegistrationForm()">Registrace</button>
+    <button onclick="showLogin()">Přihlášení</button>
+    <button onclick="showUserList()">Výpis uživatelů</button>
+</div>
+
+<div id="registrationForm" class="form-container">
+    <h2>Registrace</h2>
+    <form id="registrationForm">
+        <label for="name">Jméno:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Příjmení:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="username">Uživatelské jméno:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Heslo:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="age">Věk:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="gender">Pohlaví:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Muž</option>
+            <option value="female">Žena</option>
+        </select>
+
+        <label for="status">Status uživatele:</label>
+        <input type="checkbox" id="status" name="status" checked> Aktivní<br>
+
+        <button type="button" onclick="registerUser()">Registrovat</button>
+    </form>
+</div>
+
+<div id="loginForm" class="form-container">
+    <h2>Přihlášení</h2>
+    <form id="loginForm">
+        <label for="loginUsername">Uživatelské jméno:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required>
+
+        <label for="loginPassword">Heslo:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+
+        <button type="button" onclick="login()">Přihlásit</button>
+    </form>
+</div>
+
+<div id="userList" class="user-list-container">
+    <h2>Seznam uživatelů</h2>
+    <div id="userListContent"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
